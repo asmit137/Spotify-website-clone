@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your favourite music is here</title>
+    <link rel="icon"  href="photos/logo.png">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #53ce53;
+    }
+    nav {
+        font-family: 'Ubuntu', sans-serif;
+
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        height: 50px;
+        background-color: black;
+        color: white;
+    }
+    
+    nav ul li {
+        padding: 0 12px;
+    }
+
+    
+    .brand img {
+        width: 44px;
+        padding: 0 8px;
+    }
+    
+    .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 1.3rem;
+    }
+    .music-player {
+        position: absolute;
+        bottom: 10px;
+        width: 1020px;
+        background-color: black;
+        border: 1px solid black;
+        padding: 20px;
+        box-shadow: 0px 0px 10px black;
+        margin-left: 130px;
+        border-radius: 16px;
+    }
+    .controls {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #368236;
+        color: #151515;
+        border: none;
+        margin: 0px 25px;
+        width: 90px;
+        border-radius: 40px;
+        margin-left: 70px;
+    }
+
+    .center{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .audio {
+        width: 1020px;
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .image {
+        margin: 25px;
+        height: 250px;
+        width: 250px;
+        background-image: url("photos/Not_ramaiya.jpeg");
+        background-size: cover;
+        border-radius: 15%;
+        margin-left: 175px;
+        border: 5px solid black;
+    }
+
+    .track-name {
+        font-size: 3rem;
+        margin-left: 85px;
+    }
+
+    .track-artist {
+        font-size: 1.5rem;
+        margin-left: 80px;
+    }
+
+    .art {
+        margin-bottom: 210px;
+        margin-left: 370px;
+
+    }
+    #favourite{
+        width: 200px;
+    }
+    #download{
+        width: 120px;
+    }
+</style>
+<body>
+    <nav>
+        <!-- navbar  -->
+        <ul>
+            <li class="brand"><img src="photos/logo.png" alt="Spotify"> Spotify</li>
+            <li onclick="goToNextPage()" style="cursor: pointer;">Go Back</li>
+        </ul>
+    </nav>
+    <div class="art">
+        <div class="track-name">Not Ramaiya Vastavaiya</div>
+        <div class="track-artist">Anirudh Ravichander, Vishal Dadlani, Shilpa Rao</div>
+        <div class="image"></div>
+    </div>
+    <div class="music-player">
+        <audio id="audio" controls class="audio">
+            <source src="Songs/Not Ramaiya Vastavaiya Jawan 128 Kbps.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button id="playPauseBtn">Play</button>
+            <button id="stopBtn">Stop</button>
+            <button id="favourite">Add to favourite</button>
+            <a href="Songs/Not Ramaiya Vastavaiya Jawan 128 Kbps.mp3" download><button id="download">download</button></a>
+        </div>
+    </div>
+    
+    <script>
+        function goToNextPage() {
+            // Redirect to the next page when the heading is clicked
+            window.location.href = 'spotify.php'; // Replace 'nextpage.html' with the actual URL of the next page
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('audio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            const volumeSlider = document.getElementById('volumeSlider');
+            const progressBar = document.getElementById('progressBar');
+            const favouritebtn = document.getElementById('favourite');
+
+            favouritebtn.addEventListener('click',()=>{
+                alert("Your Song is added to favourite list");
+            });
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.textContent = 'Pause';
+                } else {
+                    audio.pause();
+                    playPauseBtn.textContent = 'Play';
+                }
+            });
+
+            stopBtn.addEventListener('click', () => {
+                audio.pause();
+                audio.currentTime = 0;
+                playPauseBtn.textContent = 'Play';
+            });
+            favouriteBtn.addEventListener('click', function () {
+                // Add your logic for adding to favorites here
+                alert('Added to favorites!');
+            });
+          
+        });
+
+
+
+    </script>
+</body>
+</html>

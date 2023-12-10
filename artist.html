@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(ARTIST) Spotify - Your favourite music is here</title>
+    <link rel="icon"  href="photos/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        body {
+            background-color: #055505;
+        }
+
+        nav {
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        nav ul li {
+            padding: 0 12px;
+        }
+
+
+        .brand img {
+            width: 44px;
+            padding: 0 8px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+
+        /* content 
+        
+        div 1 */
+        .content {
+            display: flex;
+        }
+
+        .info {
+            width: 20%;
+            height: 1016px;
+            background-color: rgb(174, 247, 145);
+            margin: 10px 0px 0px 10px;
+        }
+
+        .music {
+            margin: 10px;
+            width: 1080px;
+            background-color: rgb(123, 215, 87);
+        }
+
+        .title {
+            margin: 5px;
+            background-color: black;
+            color: white;
+            height: 40px;
+            width: 255px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .photo {
+            background-image: url("photos/sonunigam.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #484317;
+            width: 190px;
+            height: 190px;
+            margin: 20PX 30PX 0PX 30px;
+            border-radius: 48%;
+        }
+
+        .head {
+            background-color: black;
+            color: white;
+            align-content: center;
+            text-align: center;
+            height: 703px;
+            margin: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        .head h5 {
+            font-size: 30px;
+
+        }
+
+        .head p {
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        .first {
+            display: flex;
+            height: 160px;
+            width: 1040px;
+            margin: 8px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        /* .first:hover{
+            width: 1060px;
+            height: 180px;
+            box-shadow: 8px inset rgb(155, 233, 155);
+            margin-top: 0px;
+            margin-left: 0px;
+        } */
+        .song_img {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 125px;
+            width: 125px;
+            margin: 16px 0px 0px 9px;
+        }
+
+        .song_img:hover {
+            margin: 0px;
+            height: 160px;
+            width: 160px;
+        }
+
+        .name {
+            margin-top: 20px;
+            margin-left: 18px;
+            width: 373px;
+        }
+
+        .name h4 {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        .artist {
+            margin-top: 8px;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .album {
+
+            font-size: 16px
+        }
+
+        .play {
+            height: 60px;
+            width: 140px;
+            padding: 10px;
+            margin-top: 35px;
+            border-radius: 45%;
+            border-style: solid;
+            margin-left: 220px;
+            color: white;
+            background-color: #155315;
+            font-size: 22px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            height: 30px;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .download {
+            width: 141px;
+            height: 63px;
+            background-color: #155315;
+            color: white;
+            text-align: center;
+            padding-top: 2px;
+            margin-top: 33px;
+            margin-left: 15px;
+            border-radius: 45%;
+            cursor: pointer;
+            font-size: 22px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- navbar  -->
+        <ul>
+            <li class="brand"><img src="photos/logo.png" alt="Spotify"> Spotify</li>
+            <li onclick="goback()" style="cursor: pointer;">Go Back</li>
+        </ul>
+    </nav>
+    <!-- information -->
+    <div class="content">
+        <div class="info">
+            <div class="title">
+                <h4>Artist</h4>
+            </div>
+            <div class="photo"></div>
+            <div class="head">
+                <h5>Sonu Nigam</h5>
+                <p>Sonu Nigam (born 30 July 1973) is an Indian playback singer, music director, dubbing artist and
+                    actor. He has been described in the media as one of the best, most popular and successful playback
+                    singers in Hindi and Kannada cinema. In 2022, he was honoured by the Government of India with the
+                    Padma Shri, the country's fourth-highest civilian honour for his contribution in the field of arts.
+                    <br><br>
+                    Sonu Nigam sings predominantly in Hindi and Kannada language films but has also sung in Bengali, Marathi,
+                    Telugu, Tamil, Odia, Bhojpuri, Gujarati, Malayalam, Nepali, Tulu, Chhattisgarhi, Meiteilon and other
+                    Indian languages. Nigam has released a number of non-film albums and acted in some Hindi films. He
+                    is known as the "Modern Rafi", a title given to him after his musical idol Mohammad Rafi.</p>
+            </div>
+        </div>
+        <div class="music">
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/mainagar.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Main Agar Kahu</h4>
+                    <div class="artist">Artist : Sonu Nigam, Shreya Ghosha</div>
+                    <div class="album">Album : Om Shanti Om(2007)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton" onclick="start()">Play</button>
+                        <a href="Songs/Main Agar Kahoon Om Shanti Om 128 Kbps.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer" style="display: none;">
+                        <audio id="audio" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Main Agar Kahoon Om Shanti Om 128 Kbps.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/tiktikvajte.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Tik Tik Vajte Dhokyat</h4>
+                    <div class="artist">Artist : Sonu Nigam, Sayali Pankaj </div>
+                    <div class="album">Album : Duniyadari(2013)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton2" onclick="start2()">Play</button>
+                        <a href="Songs/Tik-Tik-Vajate-Dokyaat-(Duet)(PagalWorld).mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer2" style="display: none;">
+                        <audio id="audio2" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Tik-Tik-Vajate-Dokyaat-(Duet)(PagalWorld).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/mainhoona.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Tumse Milke Dil Ka</h4>
+                    <div class="artist">Artist : Sonu Nigam, Altaf Sabri, Hashim Sabri</div>
+                    <div class="album">Album : Main Hoon Na (2004)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton3" onclick="start3()">Play</button>
+                        <a href="Songs/tumsemilke.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer3" style="display: none;">
+                        <audio id="audio3" controls style="width: 525px;margin-top: 16px;">
+                            <source src="SOngs/tumsemilke.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/kalhonaho.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Kal Ho Na Ho</h4>
+                    <div class="artist">Artist : Sonu Nigam</div>
+                    <div class="album">Album : Kal Ho Na Ho(2003)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton1" onclick="start3()">Play</button>
+                        <a href="Songs/kal ho na ho.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer1" style="display: none;">
+                        <audio id="audio1" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/kal ho na ho.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/boos.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Pita Se hai Naam Mera</h4>
+                    <div class="artist">Artist : Sonu Nigam, Meet Bros Anjjan</div>
+                    <div class="album">Album : BOSS(2013)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton4" onclick="start4()">Play</button>
+                        <a href="Songs/Pitah Se Hai Naam Tera.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer4" style="display: none;">
+                        <audio id="audio4" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Pitah Se Hai Naam Tera.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/bagwanhaikaha.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Bhagwan Hai Kaha Re Tu</h4>
+                    <div class="artist">Artist : Sonu Nigam </div>
+                    <div class="album">Album : PK(2014)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton5" onclick="start5()">Play</button>
+                        <a href="Songs/bollywood_PK 2014 - Bhagwan Hai Kahan Re Tu.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer5" style="display: none;">
+                        <audio id="audio5" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/bollywood_PK 2014 - Bhagwan Hai Kahan Re Tu.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            copyright @Spotify Clone
+        </div>
+    </footer>
+
+    <script>
+
+        function goback() {
+            window.location.href = "spotify.php";
+        }
+
+
+        function start() {
+            var playButton = document.getElementById('playbutton');
+            var audioContainer = document.getElementById('audiocontainer');
+            var audio = document.getElementById('audio');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+
+        function start1() {
+            var playButton = document.getElementById('playbutton1');
+            var audioContainer = document.getElementById('audiocontainer1');
+            var audio = document.getElementById('audio1');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+
+        function start2() {
+            var playButton = document.getElementById('playbutton2');
+            var audioContainer = document.getElementById('audiocontainer2');
+            var audio = document.getElementById('audio2');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+
+        function start3() {
+            var playButton = document.getElementById('playbutton3');
+            var audioContainer = document.getElementById('audiocontainer3');
+            var audio = document.getElementById('audio3');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+
+        function start4() {
+            var playButton = document.getElementById('playbutton4');
+            var audioContainer = document.getElementById('audiocontainer4');
+            var audio = document.getElementById('audio4');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+
+        function start5() {
+            var playButton = document.getElementById('playbutton5');
+            var audioContainer = document.getElementById('audiocontainer5');
+            var audio = document.getElementById('audio5');
+
+            // Add a click event listener to the play button
+            playButton.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = 'Pause';
+                    audioContainer.style.display = 'block'; // Show the audio controls
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = 'Play';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

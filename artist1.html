@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(ARTIST) Spotify - Your favourite music is here</title>
+    <link rel="icon"  href="photos/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+        
+        }
+        
+        body {
+            background-color: #055505;
+        }
+        
+        nav {
+            font-family: 'Ubuntu', sans-serif;
+        
+        }
+        
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+        
+        nav ul li {
+            padding: 0 12px;
+        }
+        
+        
+        .brand img {
+            width: 44px;
+            padding: 0 8px;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+        
+        /* content 
+        
+        div 1 */
+        .content {
+            display: flex;
+        }
+        
+        .info {
+            width: 20%;
+            height: 1016px;
+            background-color: rgb(174, 247, 145);
+            margin: 10px 0px 0px 10px;
+        }
+        
+        .music {
+            margin: 10px;
+            width: 1080px;
+            background-color: rgb(123, 215, 87);
+        }
+        
+        .title {
+            margin: 5px;
+            background-color: black;
+            color: white;
+            height: 40px;
+            width: 255px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        .photo {
+            background-image: url("photos/arijit.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #484317;
+            width: 190px;
+            height: 190px;
+            margin: 20PX 30PX 0PX 30px;
+            border-radius: 48%;
+        }
+        
+        .head {
+            background-color: black;
+            color: white;
+            align-content: center;
+            text-align: center;
+            height: 717px;
+            margin: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 20px;
+
+        }
+        .head h5{
+            font-size: 30px;
+            
+        }
+        .head p{
+            font-size: 15px;
+            margin-top: 15px;
+        }
+        
+        .first {
+            display: flex;
+            height: 160px;
+            width: 1040px;
+            margin: 8px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        
+        /* .first:hover{
+            width: 1060px;
+            height: 180px;
+            box-shadow: 8px inset rgb(155, 233, 155);
+            margin-top: 0px;
+            margin-left: 0px;
+        } */
+        .song_img {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 125px;
+            width: 125px;
+            margin: 16px 0px 0px 9px;
+        }
+        
+        .song_img:hover{
+            margin: 0px;
+            height: 160px;
+            width: 160px;
+        }
+        
+        .name {
+            margin-top: 20px;
+            margin-left: 18px;
+            width: 373px;
+        }
+        
+        .name h4 {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        
+        .artist {
+            margin-top: 8px;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .album {
+            margin-top: 5px;
+            font-size: 16px
+        }
+        
+        .play {
+            height: 60px;
+            width: 140px;
+            padding: 10px;
+            margin-top: 35px;
+            border-radius: 45%;
+            border-style: solid;
+            margin-left: 220px;
+            color: white;
+            background-color: #155315;
+            font-size: 22px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .footer {
+            background-color: black;
+            color: white;
+            height: 30px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        
+        .buttons{
+            display: flex;
+            margin-right: 20px;
+        }
+        .download{
+            width: 141px;
+          height: 63px;
+          background-color: #155315;
+          color: white;
+          text-align: center;
+          padding-top: 2px;
+          margin-top: 33px;
+          margin-left: 15px;
+          border-radius: 45%;
+          cursor: pointer;
+          font-size: 22px;
+          border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- navbar  -->
+        <ul>
+            <li class="brand"><img src="photos/logo.png" alt="Spotify"> Spotify</li>
+            <li onclick="goback()" style="cursor: pointer;">Go Back</li>
+        </ul>
+    </nav>
+    <!-- information -->
+    <div class="content">
+        <div class="info">
+            <div class="title">
+                <h4>Artist</h4>
+            </div>
+            <div class="photo"></div>
+            <div class="head">
+                <h5>Arijit Singh</h5>
+                <p>Arijit Singh (born 25 April 1987) is an Indian playback singer and music composer. The recipient of several accolades including a National Film Award and seven Filmfare Awards, he has recorded songs in several Indian languages.
+                    <br><br>
+                    Singh began his career when he participated in the contemporary reality show Fame Gurukul in 2005, but did not receive widespread recognition until the release of "Tum Hi Ho" and "Chahun Main Ya Naa" in 2013. He was declared the most-streamed Indian artist of 2020, 2021 and 2022 by Spotify. He is the 3rd most followed artist globally and the most followed Asian on Spotify.</p>
+            </div>
+        </div>
+        <div class="music">
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/chennai.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Kashmir Main Tu Kanyakumari</h4>
+                    <div class="artist">Artist : Sunidhi Chauhan, Arijit Singh, Neeti Mohan</div>
+                    <div class="album">Album : Chennai Express(2013)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton" onclick="start()">Play</button>
+                        <a href="Songs/bollywood_CE 2013 - Kashmir Main Tu Kanyakumari.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer" style="display: none;">
+                        <audio id="audio" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/bollywood_CE 2013 - Kashmir Main Tu Kanyakumari.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/wohdin.jpg');"></div>
+                <div class="name">
+                    <h4>Song Name : Woh Din</h4>
+                    <div class="artist">Artist : Arijit Singh </div>
+                    <div class="album">Album : Chhichhore(2019)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton1" onclick="start1()">Play</button>
+                        <a href="Songs/Woh Din Chhichhore 128 Kbps.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer1" style="display: none;">
+                        <audio id="audio1" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Woh Din Chhichhore 128 Kbps.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/Qaafirana.jpeg')"></div>
+                <div class="name">
+                    <h4>Song Name : Qaafirana</h4>
+                    <div class="artist">Artist : Arijit Singh, Nikhita Gandhi </div>
+                    <div class="album">Album : Kedarnath(2018) </div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton2" onclick="start2()">Play</button>
+                        <a href="Songs/01. Kafirana.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer2" style="display: none;">
+                        <audio id="audio2" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/01. Kafirana.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/khairiyat.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Khairiyat</h4>
+                    <div class="artist">Artist : Arijit Singh </div>
+                    <div class="album">Album : Chhichhore(2019)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton3" onclick="start3()">Play</button>
+                        <a href="Songs/Khairiyat Chhichhore 128 Kbps.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer3" style="display: none;">
+                        <audio id="audio3" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Khairiyat Chhichhore 128 Kbps.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image: url('photos/kesariya.jpeg');"></div>
+                <div class="name">
+                    <h4>Song Name : Kesariya Tera</h4>
+                    <div class="artist">Artist : Arijit Singh </div>
+                    <div class="album">Album : Brahmastra(2022) </div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton4" onclick="start4()">Play</button>
+                        <a href="Songs/Kesariya_192(PagalWorld.com.pe).mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer4" style="display: none;">
+                        <audio id="audio4" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Kesariya_192(PagalWorld.com.pe).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="song_img" style="background-image:url('photos/galtisemistaake.jpeg')"></div>
+                <div class="name">
+                    <h4>Song Name : Galti Se Mistake</h4>
+                    <div class="artist">Artist : Arijit Singh, Amit Mishra</div>
+                    <div class="album">Album : Jagga Jasoos(2017)</div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <button class="play" id="playbutton5" onclick="start5()">Play</button>
+                        <a href="Songs/Galti Se Mistake (Jagga Jasoos) 128 Kbps.mp3" download><button class="download">Download</button></a>
+                    </div>
+                    <div id="audiocontainer5" style="display: none;">
+                        <audio id="audio5" controls style="width: 525px;margin-top: 16px;">
+                            <source src="Songs/Galti Se Mistake (Jagga Jasoos) 128 Kbps.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            copyright @Spotify Clone
+        </div>
+    </footer>
+
+    <script>
+        
+function goback() {
+    window.location.href = "spotify.php";
+}
+
+
+function start() {
+    var playButton = document.getElementById('playbutton');
+    var audioContainer = document.getElementById('audiocontainer');
+    var audio = document.getElementById('audio');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+
+function start1() {
+    var playButton = document.getElementById('playbutton1');
+    var audioContainer = document.getElementById('audiocontainer1');
+    var audio = document.getElementById('audio1');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+
+function start2() {
+    var playButton = document.getElementById('playbutton2');
+    var audioContainer = document.getElementById('audiocontainer2');
+    var audio = document.getElementById('audio2');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+
+function start3() {
+    var playButton = document.getElementById('playbutton3');
+    var audioContainer = document.getElementById('audiocontainer3');
+    var audio = document.getElementById('audio3');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+
+function start4() {
+    var playButton = document.getElementById('playbutton4');
+    var audioContainer = document.getElementById('audiocontainer4');
+    var audio = document.getElementById('audio4');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+
+function start5() {
+    var playButton = document.getElementById('playbutton5');
+    var audioContainer = document.getElementById('audiocontainer5');
+    var audio = document.getElementById('audio5');
+
+    // Add a click event listener to the play button
+    playButton.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = 'Pause';
+            audioContainer.style.display = 'block'; // Show the audio controls
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
+}
+    </script>
+</body>
+
+</html>
