@@ -442,7 +442,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" class="password ele" name="password" placeholder="password">
                 </label>
                 <button class="clkbtn">Login</button>
-                <p>For New Member ?  <a href="sign.php">Sign Up</a></p>
+                <p>For New Member ?  <a href="index.php">Sign Up</a></p>
             </div>
         </div>
         </form>
